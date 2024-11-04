@@ -1,12 +1,31 @@
 * {
   box-sizing: border-box;
 }
+:root{
+  --color1:rgb(59, 59, 59);
+  --color2:rgb(36, 36, 36);
+  --colercolor:green;
+  --txtcol:black;
+
+  --cardw:300px;
+  --s50:50%;
+  --CSgapp:10px;
+  --CMgapp:20px;
+  --CLgapp:30px;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  color: black;
-  background-color: white;
+  color:var(--txtcol);
+  background-color: var(--color1);
 }
 
 nav {
@@ -16,8 +35,9 @@ nav {
   justify-content: center;
   padding: 0.5rem;
   gap: 0.5rem;
-  border-bottom: solid 1px #aaa;
-  background-color: #eee;
+  border-bottom: solid 1px var(--colercolor);
+  background-color: var(--color2);
+  box-shadow: 0px 1px 3px var(--colercolor);
 }
 
 nav a {
@@ -25,20 +45,37 @@ nav a {
   min-width: 9rem;
   padding: 0.5rem;
   border-radius: 0.2rem;
-  border: solid 1px #aaa;
+  border: solid 1px var(--colercolor);
   text-align: center;
   text-decoration: none;
   color: #555;
 }
 
 nav a[aria-current='page'] {
-  color: #000;
-  background-color: #d4d4d4;
+  color: var(--txtcol);
+  background-color: var(--colercolor);
 }
 
 main {
   padding: 1rem;
 }
+
+.joinUsCard{
+  display: flex;
+  flex-direction: column;
+}
+.joinUsCard > button{
+  background-color: var(--color1);
+  color: var(--colercolor);
+  padding: 2.5px 5px;
+  /* text-shadow: 0 0 1px var(--colercolor); */
+}
+
+.joinUsCard > button:hover {
+  color: var(--txtcol);
+  /* text-shadow: none; */
+}
+.joinUsCard > button
 
 h1 {
   font-weight: bold;
