@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 :root{
   --color1:rgb(59, 59, 59);
   --color2:rgb(36, 36, 36);
@@ -19,7 +20,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 body {
   margin: 0;
@@ -64,18 +64,21 @@ main {
   display: flex;
   flex-direction: column;
 }
+
 .joinUsCard > button{
   background-color: var(--color1);
   color: var(--colercolor);
   padding: 2.5px 5px;
-  /* text-shadow: 0 0 1px var(--colercolor); */
+  box-shadow: 1px 1px 2px -1px black;
 }
 
 .joinUsCard > button:hover {
   color: var(--txtcol);
-  /* text-shadow: none; */
 }
-.joinUsCard > button
+
+.joinUsCard > button:active{
+  box-shadow: -1px -1px 2px -1px var(--color1) inset,1px 1px 1px #000000 inset;
+}
 
 h1 {
   font-weight: bold;
